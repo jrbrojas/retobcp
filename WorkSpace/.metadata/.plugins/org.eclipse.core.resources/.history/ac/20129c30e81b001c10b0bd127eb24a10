@@ -1,0 +1,15 @@
+package com.retobcp.services;
+
+import com.retobcp.model.Kambista;
+
+public class TipocambioServiceImpl implements ITipocambioService {
+
+	@Override
+	public Kambista convertirtc(float monto, String monedaorigen, String monedadestino) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

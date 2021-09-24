@@ -1,0 +1,13 @@
+package com.retobcp.model;
+
+import java.persistence.Entity; 
+
+@Entity
+public class persona {
+
+	
+	
+	
+}
+
+

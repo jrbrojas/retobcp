@@ -1,0 +1,9 @@
+package com.retobcp.model;
+
+public class Kambista {
+	
+	@Entity
+	
+	private integer 
+
+}

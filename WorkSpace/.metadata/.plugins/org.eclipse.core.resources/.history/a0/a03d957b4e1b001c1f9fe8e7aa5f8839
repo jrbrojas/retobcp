@@ -1,0 +1,10 @@
+package com.retobcp.model;
+
+@Entityy
+public class persona {
+
+	@id
+	private Integer id;
+}
+
+

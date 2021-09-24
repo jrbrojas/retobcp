@@ -1,0 +1,11 @@
+package com.retobcp.model;
+
+@Entity
+public class persona {
+
+	
+	
+	
+}
+
+

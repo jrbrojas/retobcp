@@ -1,0 +1,45 @@
+package com.retobcp.services;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.retobcp.dao.KambistaDAO;
+import com.retobcp.dao.TipocambioDAO;
+import com.retobcp.model.Kambista;
+import com.retobcp.model.Tipocambio;
+
+public class KambistaServiceImpl implements KambistaService {
+
+	@Autowired
+	private TipocambioDAO tipocambioDAO;
+	
+	@Autowired
+	private KambistaDAO kambistaDAO;
+	
+	@Transactional
+	@Override
+	public Kambista convertirtc(float monto, String monedaorigen, String monedadestino) {
+		// TODO Auto-generated method stub
+	Tipocambio tipocambio = tipocambioDAO.findbyTipocambio(monedaorigen, monedadestino);
+	 
+	//MONTO * TC
+	
+	float montotc = monto * tipocambio.getTc();
+	Kambista kambista = new Kambista();
+	
+	
+	kambista.setMoneda_origen(monedaorigen);
+	kambista.setMoneda_destino(monedadestino);
+	kambista.setMonto(monto);
+	kambista.setTc(tipocambio.getTc());
+	kambista.setMonto_tc(montotc);
+	
+	kambistaDAO.save(kambista);
+	
+		
+		return kambista;
+	}
+		 	
+	
+}

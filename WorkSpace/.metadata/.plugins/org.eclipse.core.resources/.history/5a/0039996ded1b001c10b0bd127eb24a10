@@ -1,0 +1,9 @@
+package com.retobcp.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.retobcp.model.Tipocambio;
+
+public interface TipocambioDAO extends JpaRepository<Tipocambio, Integer>	{
+
+}

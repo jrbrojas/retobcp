@@ -1,0 +1,19 @@
+package com.retobcp.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.retobcp.dao.PersonaDAO;
+
+@RestController
+@RequestMapping("personas")
+
+public class PersonaRest {
+	
+	//localhost:8080/retobcp/
+	@Autowired
+	private PersonaDAO personaDAO;
+
+	
+}

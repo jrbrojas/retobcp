@@ -1,0 +1,32 @@
+
+
+  <div class="card border-primary mb-3">
+    <div class="card-header">Hola, consulta tu tipo de cambio </div>
+    <div class="card-body text-primary">
+       <div class="row">
+        <div class="input-group mb-3 col-md-4"> 
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="monedaorigen" >
+            <span class="input-group-text">.00</span>
+          </div>
+
+          <select class="form-select col-md-4 form-select-sm" aria-label="Default select example">
+            <option selected>Seleccione moneda origen </option>
+            <option value="1">Soles</option>
+            <option value="2">Dolares</option>
+         </select>
+
+         <select class="form-select col-md-4 form-select-sm" aria-label="Default select example">
+            <option selected>Seleccione moneda destino</option>
+            <option value="1">Soles</option>
+            <option value="2">Dolares</option>
+         </select>
+
+         <button class="btn btn-primary" (click)="realizarCambio()">Cambiar</button>
+
+       </div>
+
+   </div>
+  </div>
+  
+

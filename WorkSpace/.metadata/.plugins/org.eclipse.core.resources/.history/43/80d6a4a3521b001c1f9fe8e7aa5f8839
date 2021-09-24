@@ -1,0 +1,5 @@
+package com.retobcp.dao;
+
+public interface personaDAO extends JpaRepository<Persona, Integer>	 {
+
+}

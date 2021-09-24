@@ -1,0 +1,12 @@
+package com.retobcp.model;
+
+
+public class persona {
+
+	@Id
+	private Integer id;
+	
+	
+}
+
+

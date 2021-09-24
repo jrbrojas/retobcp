@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  backend:
+    image: openjdk:12-alpine
+    container_name: java_backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./target:/usr/src
+    entrypoint: ["java", "-jar", "/usr/src/retobcp-0.0.1-SNAPSHOT.jar"]
+    restart: always
+  mysql:
+    image: mysql
+    container_name: mysql_database
+    ports:
+      - 3306:3306
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: retobcp_bd

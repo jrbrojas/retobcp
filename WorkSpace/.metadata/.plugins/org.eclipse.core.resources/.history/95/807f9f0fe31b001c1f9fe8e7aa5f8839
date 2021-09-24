@@ -1,0 +1,23 @@
+package com.retobcp.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Tipocambio {
+
+	@Id
+	private Integer id;
+	
+	@Column
+	private String nombreOrigen;
+	
+	@Column
+	private String nombreDestino;
+	
+	@Column
+	private float tc;
+	
+	
+}

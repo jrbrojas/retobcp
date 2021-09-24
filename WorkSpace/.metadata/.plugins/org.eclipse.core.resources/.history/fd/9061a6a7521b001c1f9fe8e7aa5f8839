@@ -1,0 +1,9 @@
+package com.retobcp.dao;
+
+import org.springframework.data.jpa.repository;
+
+import com.retobcp.model.persona;
+
+public interface PersonaDAO extends JpaRepository<Persona, Integer>	 {
+
+}

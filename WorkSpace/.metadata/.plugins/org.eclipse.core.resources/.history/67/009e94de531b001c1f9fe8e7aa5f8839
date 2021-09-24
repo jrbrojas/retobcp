@@ -1,0 +1,12 @@
+package com.retobcp.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("personas")
+
+public class PersonaRest {
+	
+	//localhost:8080/retobcp/
+
+}
